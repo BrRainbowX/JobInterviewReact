@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# MVISIA JOB INTERVIEW
+Eu utilizei React JS para criar o sistema.
+## Primeiro
+```
+npm install
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+depois
 
-## Available Scripts
+```
+npm start
+```
 
-In the project directory, you can run:
+ou
 
-### `npm start`
+```
+npm run build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+serve -s build
+```
+Caso não tenha o serve: npm i serve
+## Estrutura do banco de dados
+O banco de dados é um array multidimensional. E ele é salvo em estado e também em LocalStorage.
+```
+Database = [
+    {
+        database_name: NOME DO BANCO,
+        photos: [
+            {
+                photo: BASE64 DA IMAGEM
+            }
+        ]
+    }
+]
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Abaixo irei explicar os blocos na tela
 
-### `npm test`
+## Canto esquerdo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Select: Seleciona os bancos criados.
 
-### `npm run build`
+Caixa de texto: Nome do banco de dados.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Botão 'Create DB': Cria o banco de dados com o nome escrito acima.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Botão 'Delete this DB': Delete o banco que está selecionado. O banco selecionado está no select que fica acima da caixa de texto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Botão 'Delete all DBs': Deleta todos os bancos de dados.
 
-### `npm run eject`
+Botão 'Download this DB': Faz o download apenas do banco selecionado.
+```
+Apenas um banco é baixado!
+    {
+        database_name: NOME DO BANCO,
+        photos: [
+            {
+                photo: BASE64 DA IMAGEM
+            }
+        ]
+    }
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Botão 'Download all DBs': Faz o download de todos os bancos.
+```
+Todos os bancos são baixados!
+Database = [
+    {
+        database_name: NOME DO BANCO,
+        photos: [
+            {
+                photo: BASE64 DA IMAGEM
+            }
+        ]
+    }
+]
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Botão 'Restore one DB': Faz o upload apenas de um banco. (Arquivo gerado pelo botão 'Download this DB).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Botão 'Restore full DBs': Faz o upload de todos os bancos. (Arquivo gerado pelo botão 'Download all DB).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Centro
 
-## Learn More
+Botão 'Upload image': Faz upload de MULTIPLAS imagens para o banco selecionado no select no canto esquero.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Caixa de preview do crop: Depois do zoom pode mover a imagem
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Slider: Controla a quantidade de zoom.
 
-### Code Splitting
+Botão 'Crop & Save': Depois de aplicar o zoom e arrastar a imagem, você pode cortar e salvar ela. Ela fica salva no banco de dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Botão 'Download': Baixa a imagem selecionada.(Caso não tenha imagem selecionada, selecione no canto direito).
 
-### Analyzing the Bundle Size
+Botão 'Download all images': Baixa todos as imagens separadamente do banco de dados selecionado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Canto direito
 
-### Making a Progressive Web App
+Contém blocos de imagens com botões.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Botão 'Lixeira': Deleta a imagem do bloco.
 
-### Advanced Configuration
+Botão 'Baixar': Faz o download da imagem do bloco.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Botão 'Lixeira': Seleciona para 'CROP' a imagem do bloco. A imagem irá aparecer no centro da tela.
+### Informações adicionais
+```
+Node -v: v12.18.1
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Npm -v: 6.14.5
+```

@@ -1,13 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+h2, h3 {
+    color: #222222;
+    margin: 3% 0% 3% 1%;
+}
+h5 {
+    color: #444444;
+    margin: 1% 0% 1% 1%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fefefe;
+}
+.crop-container {
+    width: 80px;
+}
+.content-grid {
+    display: grid;
+    margin: 0 auto !important;
+    width: 97%;
+    height: 900px;
+    margin: 0;
+    align-content: flex-start;
+    grid-template-columns: 2fr 5fr 3fr;
+    column-gap: 1%;
+    gap: 1%;
+}
+.content-grid--item {
+    width: 100%;
+    height: min-content;
+    background-color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.alert-block {
+    width: 80%;
+    margin: 10%;
+    text-align: center;
+}
+
+.left-sidebar {
+    background-color: #ffffff;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.left-sidebar > div{
+    width: 90%;
+    margin: 5%;
+}
+.left-sidebar > div > Button{
+    margin: 2% 0%;
+}
+.left-sidebar--title, .left-sidebar--subtitle {
+    color: #00579d;   
+    text-align: center;
+}
+
+
+.main {
+    background-color: #ffffff;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px rgba(0, 87, 157, 0.5) solid;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.main--photo, .main--photo-info, .main--header {
+    width: 95%;
+    margin: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.main--slide {
+    width: 90%;
+    margin: 5%;
+}
+.main--button {
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.right-sidebar {
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+.right-sidebar::-webkit-scrollbar-track {
+    width: 5px;
+}
+.right-sidebar--items {
+    width: 100%;
+    margin: 0% 0% 5% 0%;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.right-sidebar--items__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
